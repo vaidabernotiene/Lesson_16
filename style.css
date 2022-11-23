@@ -4,8 +4,17 @@
   box-sizing: border-box;
 }
 
+html{
+    transition: 3s ease;
+}
+
 :root {
-  --background-color-main: white;
+  --background-color-first: #3d5220;
+  --background-color-second: #b7cb99;
+  --background-color-third: #778fd2;
+  --background-color-fourth: #2a3759;
+  --background-color-fifth: #431d32;
+  --color: white;
   --width-main: 80%;
 }
 
@@ -22,16 +31,18 @@ p {
 }
 
 header {
-  background-color: black;
+  background-color: var(--background-color-fifth);
   height: 70px;
   display: flex;
   justify-content: space-between;
   column-gap: 20px;
   padding: 0 5%;
+
+  top: 0;
+  position: sticky;
 }
 
 header img {
-  background-color: antiquewhite;
   height: 100%;
   background-size: cover;
   max-height: 100%;
@@ -44,19 +55,19 @@ header img {
 }
 
 .menu > a {
-  color: var(--background-color-main);
+  color: var(--color);
   text-decoration: none;
 }
 
 #section-about,
 #section-gallery {
-  background-color: lightskyblue;
+  background-color: var(--background-color-second);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* row-gap: 10%; */
+  row-gap: 10%;
 }
 
 #section-about {
@@ -69,29 +80,51 @@ header img {
 }
 
 #section-gallery {
-  background-color: lightblue;
-  padding: 30px 0;
-  row-gap: 40px;
+  background-color: var(--background-color-first);
+  padding: 30px 10%;
+  gap: 40px;
 }
 
 .gallery-card {
-  background-color: lightgrey;
+  background-color: var(--background-color-fourth);
   border-radius: 5%;
-  width: var(--width-main);
+  width: 100%;
 }
 
 .gallery-card img {
+    height: 100%;
   width: 100%;
   border-radius: 5% 5% 0 0;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .gallery-card h2 {
-  justify-content: center;
+  color: var(--color);
+  padding-bottom: 5%;
+}
+
+/* PLANCete */
+@media screen and (min-width: 769px) {
+  #section-gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 10%;
+    
+  }
+
+  #gallery-card{
+    width: 100%;
+    gap: 50px;
+  }
+
+  section{
+    height: fit-content;
+  }
 }
 
 #section-contact {
-  background-color: lightcyan;
+  background-color: var(--background-color-third);
   height: 600px;
   display: flex;
   justify-content: center;
