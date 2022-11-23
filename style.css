@@ -6,22 +6,28 @@
 
 :root {
   --background-color-main: white;
+  --width-main: 80%;
 }
 
-h1{
-    font-size: 3em;
+html {
+  scroll-behavior: smooth;
 }
 
-p{
-    font-size: 1.5em;
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.5em;
 }
 
 header {
   background-color: black;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   column-gap: 20px;
+  padding: 0 5%;
 }
 
 header img {
@@ -42,29 +48,89 @@ header img {
   text-decoration: none;
 }
 
-#section-about, #section-gallery {
+#section-about,
+#section-gallery {
   background-color: lightskyblue;
-  height: 600px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  row-gap: 10%;
+  /* row-gap: 10%; */
+}
+
+#section-about {
+  height: 600px;
 }
 
 #section-about p,
 #section-about h1 {
-  width: 80%;
+  width: var(--width-main);
 }
 
-#section-gallery{
-    background-color: lightblue;
-    height: 1000px;
+#section-gallery {
+  background-color: lightblue;
+  padding: 30px 0;
+  row-gap: 40px;
 }
 
-#section-contact{
-    background-color: lightcyan;
-    height: 500px;
+.gallery-card {
+  background-color: lightgrey;
+  border-radius: 5%;
+  width: var(--width-main);
+}
+
+.gallery-card img {
+  width: 100%;
+  border-radius: 5% 5% 0 0;
+  margin-bottom: 40px;
+}
+
+.gallery-card h2 {
+  justify-content: center;
+}
+
+#section-contact {
+  background-color: lightcyan;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-contact img {
+  width: 100%;
+  height: 100%;
+}
+
+#section-contact form {
+  width: var(--width-main);
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+#section-contact input {
+  height: 50%;
+  font-size: 1.5em;
+  border: none;
+  padding: 10px;
+}
+
+#section-contact textarea {
+  width: 100%;
+  height: 250px;
+  font-size: 1.5em;
+  resize: none;
+  border: none;
+  padding: 10px;
+}
+
+#section-contact button {
+  width: 25%;
+  height: 50px;
+  font-size: 1.5em;
+  resize: none;
+  border: none;
+  border-color: bisque;
 }
